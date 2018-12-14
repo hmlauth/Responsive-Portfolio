@@ -1,0 +1,317 @@
+/* Code box-sizing property across "all" so that all elements' width/height properties INCLUDES content, padding and border. This ensures that the div has a full width of Xpx, no matter padding or border. It helps to eliminate the complexity that comes from widths that come from multiple properties/no longer have to perform mental math. */
+* {
+    box-sizing: border-box; 
+}
+
+
+
+body {
+    margin: 0 auto;
+    background-image: url(../images/what-the-hex-dark.png);
+}
+
+.container { /* Here if I need it eventually ... */
+   
+}
+
+/* ALL PAGES */
+    /* Font for all headings across all pages */
+    h1, h2 {
+        font-family: 'Georgia', 'Times', 'Times New Roman', serif;
+        color: #4aaaa5;
+    }
+
+    /* Font for all fonts other that headings across all pages */
+    .middle, footer, nav {
+        font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    }
+
+    /* TOP-HEADER ACROSS ALL PAGES */
+    .top {
+        background-color: #ffffff;
+        width: 100%;
+        display: inline-block;
+        border-bottom: 3px solid #777777;
+    }
+
+        .top-container {
+            background-color: #ffffff;
+            width: 960px;
+            margin: 0 auto;
+            height: 79px;
+            position: relative;
+            
+        }
+
+            h1 {
+                background-color: #4aaaa5;
+                color: white;
+                float: left;
+                margin: 0px;
+                padding: 21px;
+                position: absolute;
+                bottom: 0px;
+            }
+
+            .navigation {
+                float: right;
+            }
+
+            nav {
+                color: #777777;
+                padding-top: 30px;
+                text-align: center;
+            }
+
+                nav > a:hover {
+                    color: #4aaaa5;
+                }
+
+                nav > a:active {
+                    color: black;
+                }
+
+                span {
+                    color: #777777;
+                    margin: 20px;
+                }
+
+                nav > a {
+                    color: #777777;
+                    text-decoration: none;
+                }
+
+    /* MIDDLE CONTAINER ACROSS ALL PAGES */
+    .middle {
+        background-color: #ffffff;
+        border: 3px solid #777777;
+        max-width: 960px;
+        margin: 0 auto;
+        margin-top: 10px;   
+    }
+
+    .br {
+        margin: 500px;
+    }
+
+    /* FOOTER*/
+    footer {
+        background-color: #4aaaa5;
+        border-top: 5px solid #777777;
+        padding-top: 30px;
+        padding-bottom: 5px;
+        text-align: center;
+        font-size: small;
+        margin-top: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+/* ABOUT ME - Content styling */
+
+section {
+    margin: 20px;
+}
+
+    h2 {
+        color: #4aaaa5;
+    }
+
+        hr {
+            color: #777777;
+        }
+
+        #profile-photo {
+            float: left;
+            margin: 10px 10px 0px 0px;   
+        }
+
+        p, ul {
+            color: #777777;
+            line-height: 2.0;
+        }
+
+        ul {
+            margin-left: 337px;
+        }
+
+/* CONTACT - Form styling */
+
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #777777;
+        border-radius: 4px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    .submit {
+        background-color: #4aaaa5;
+        color: #ffffff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .submit:hover {
+        background-color: #3b928e;
+    }
+
+    .container {
+        border-radius: 5px;
+        background-color: none;
+        padding: none;
+    }
+
+/* CONTACT - "Submit" Popup! */
+    /* div class="popup" */
+    .popup {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* The actual popup: .popup (above) .popuptext (span element) */
+    .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: black;
+        color: white;
+        border-radius: 6px;
+        padding: 8px 0px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+    }
+
+    /* Popup arrow on */
+    .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+    }
+
+    /* Toggle this class (.popup from HTML, and .show from .js) - hide and who pop up */
+    .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+    }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;} 
+        }
+
+/* PORTFOLIO - Form styling */
+
+.photo-container {
+    display: inline-block;
+}
+
+img {
+   height: 150px;
+}
+
+#profile-photo {
+    height: 420px;
+}
+
+.row {
+    width: 100%;
+}
+
+.column {
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+h3 {
+    background-color: #4aa28e;
+    color: white;
+    font-family: 'Georgia', 'Times', 'Times New Roman', serif;
+    padding: 10px;
+    position: absolute;
+    bottom: 1px;
+    width: 200px;
+}
+
+h3:hover {
+    background-color: #3b928ecb;
+}
+
+h3:active {
+    background-color: #3b928ead;
+}
+
+h3 > a {
+    background-color: #3b928e;
+    color: white;
+    text-decoration: none;
+}
+
+.popuptext {
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 980px){
+    .middle, h1, .bottom {
+        max-width: 600px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    #profile-photo {
+        height: 300px;
+    }
+    ul {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .middle, .top-container, .bottom {
+        max-width: 100%;
+    }
+    .navigation {
+        margin-right: 53px;
+    }
+
+    #profile-photo {
+        height: 200px;
+    }
+    
+    ul {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 640px){
+
+}

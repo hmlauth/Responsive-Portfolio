@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Portfolio></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script src="logic.js"></script>
+</head>
+
+<body>
+<div class="container">      
+    <div class="top">
+        <div class="top-container">
+            <h1>Hanna Lauth</h1>
+            <div class="navigation">    
+                <nav>
+                    <a href="index.html">About</a>
+                    <span>|</span>
+                    <a href="portfolio.html">Portfolio</a>
+                    <span>|</span>
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>    
+        </div>
+    </div>
+    
+
+    <div class="middle">
+        <section>
+            <h2>Contact</h2>
+            <hr id="horizontal-line">
+            <div class="form-container">
+                <form> <!--Later I will need to include a PHP "relative file" it seems(?)-->
+                    <label for="name">Name</label> <!--label makes the "Name" a default box element then when CSS > width: 100% applied to the below input[type=text] everything shifts to it's own row-->
+                    <br>
+                    <input type="text" placeholder="John Smith">  
+
+                    <label for="email">Email</label> 
+                    <br>
+                    <input type="text" placeholder="example@gmail.com">    
+                
+                    <label for="message">Message</label> 
+                    <br>
+                    <textarea id="message" placeholder="How may I help you?" style="height:200px"></textarea>                    
+
+                    <div class="popup" onclick="myFunction(this, event)">
+                        <input class="submit" value="Submit">
+                            <!--Note: change to div from span because I already have span defined in CSS for something else, unless I could create an ID for each? Does div work under these circumstances? -->
+                            <span class="popuptext" id="myPopup">Thank you!
+                            </span>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>    
+
+    <div class="br">
+    </div>
+
+    <div class="bottom">
+        <footer>Copyright &copy;</footer>
+    </div>
+</div>
+</body>
+</html>

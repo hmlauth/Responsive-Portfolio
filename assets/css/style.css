@@ -322,7 +322,7 @@ h3 > a {
      }
 }
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 640px) {
 
     .top-container, .navigation, h1 {
         text-align: center;
@@ -330,15 +330,21 @@ h3 > a {
         max-width: 640px;
     }
 
+    .top-container {
+        height: 7em;
+        margin-bottom: 3px;
+    }
+
     h1 {
         width: 100%;
-        float: none;
+        position: relative;
+        margin-bottom: 10px;
     }
 
     .navigation {
         width: 100%;
         float: none;
-        height: 78px;
+        background-color: #ffffff;
     }
 
     #profile-photo {

@@ -124,6 +124,8 @@ section {
         #profile-photo {
             float: left;
             margin: 10px 10px 0px 0px;   
+            height: 415px;
+            width: 300px;
         }
 
         p, ul {

@@ -1,2 +1,5 @@
 # Responsive-Portfolio
-This site demonstrates the effect of Media Queries to control the UI on different screen sizes. 
+Media queries applied to my very first website and portfolio (pre-awareness of Bootstrap and other libraries). </br></br>
+
+<strong>Link:</strong> https://hmlauth.github.io/Responsive-Portfolio/
+
